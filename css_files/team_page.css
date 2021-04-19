@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+#header{
+    background-image: linear-gradient(to left, #17CF5B , #12C87B,#10C58C,#09BBB2,#00ADEC);
+    overflow: hidden;
+}
+#header .logo{
+    float: left;
+    font-family: 'Lobster', cursive;
+}
+#header a{
+    font-size: 25px;
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+
+}
+#header a:hover{
+    background-color: #BEF2D1;
+    color: #333;
+}
+.card{
+    position: relative;
+    background: #fff;
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+}
+.card .content{
+    width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right,#E3E3E3,#D6D6D6,#E5E5E5  );
+}
+.card .content a{
+    display: inline-block;
+    margin: 10px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid #262626;
+    color: #262626;
+    font-weight: 600;
+    font-family: 'Marck Script', cursive;
+}
+.swiper-container{
+    margin-top: 90px;
+    margin-bottom: 90px;
+    width: 550px;
+}
+.card .sliderText{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+.card .sliderText h3{
+    color: #fff;
+    font-size: 2.5em;
+    font-family: 'Merienda', cursive;
+}
+.card .content p{
+    font-family: 'Marck Script', cursive;    
+}
+.swiper-slide:nth-child(1) .sliderText{
+    background-image: linear-gradient(120deg, #85cce0, #ff0066);
+}
+.swiper-slide:nth-child(2) .sliderText{
+    background-image: linear-gradient(120deg, #cff73b, #fc6ec4);
+} 
+.swiper-slide:nth-child(3) .sliderText{
+    background-image: linear-gradient(120deg, #e61a0f, #40bf73);
+}
+.swiper-slide:nth-child(4) .sliderText{
+    background-image: linear-gradient(120deg, #0d6ef2, #f2f70d);
+}
+.swiper-slide:nth-child(5) .sliderText{
+    background-image: linear-gradient(120deg, #f7f203, #6e0d30);
+}
+.footer{
+   height: 40px;
+   background-color: #0FC38F;
+   overflow: hidden;
+}
+.back_button{
+   float: left;
+   border: 2px solid white;
+}
+.back_button a{
+    text-decoration: none;
+    font-size: 30px;
+    padding: 15px;
+    color: #f2f2f2;
+}
+.forwar_button{
+    float: right;
+    border: 2px solid white;
+}
+.forwar_button a{
+   text-decoration: none;
+   font-size: 30px;  
+   padding: 15px;
+   color: #f2f2f2;   
+}
+.forwar_button a:hover{
+   background-color: #BEF2D1;
+   color: #333;     
+}
+.back_button a:hover{
+   background-color: #BEF2D1;
+   color: #333;     
+}
+.goto{
+   position: fixed;
+   bottom: 0;
+   left: 50%;
+}
+.goto img{
+   align-items: center;
+   width: 20px;
+   height: 20px;
+
+}

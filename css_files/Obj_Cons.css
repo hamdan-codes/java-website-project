@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+#header{
+    background-image: linear-gradient(to left, #17CF5B , #12C87B,#10C58C,#09BBB2,#00ADEC);
+    overflow: hidden;
+}
+#header .logo{
+    float: left;
+    font-family: 'Lobster', cursive;
+}
+#header a{
+    font-size: 25px;
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+
+}
+#header a:hover{
+    background-color: #BEF2D1;
+    color: #333;
+}
+#topic_heading{
+    padding-top: 30px;
+    padding-left: 6px;
+    word-spacing: 6px;
+}
+.sections{
+    background: #BEF2D1;
+    margin-top: 0px;
+    padding: 20px;
+}
+.sections a{
+    color: rgb(114, 126, 107);
+    margin-left: 6%;
+    position: relative;
+    padding: 20px;
+    text-decoration: none;
+}
+.sections a:hover{
+    background: #218546;
+    color: #f2f2f2;
+}
+.head_name{
+    text-align: center;
+    font-weight: 400;
+    font-size: 4em;
+    transition: 1.2s;
+    font-family: 'Lobster', cursive;
+    text-decoration: underline;
+}
+.class{
+    margin-top: 30px;
+}
+.heading{
+    font-size: 2.5em;
+    padding: 20px;
+    text-decoration: underline;
+    text-align: center;
+}
+.short_defn{
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.7em;
+}
+.long_def{
+    font-size: 1.3em;
+    padding: 10px;
+}
+.gff{
+    margin-top: 55px;
+    border-radius: 10px;
+    background: #BEF2D1;
+    padding: 30px 10px 10px;
+}
+.gff p{
+    text-align: center;
+    font-size: 20px;
+}
+.general_format{
+    margin: 30px;
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 20px;
+    border-width:10px;  
+    border-style:groove;
+    border-color: #09BBB2;
+    transition: 1s;
+    background-color: white;
+}
+.explanation{
+    background: #F7F2E9;
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
+}
+.Example{
+    margin-top: 30px;
+    background: #BEF2D1;
+    margin-top: 10px;
+    padding: 10px;
+}
+.Example p{
+    padding: 20px;
+    font-size: larger;
+}
+ .footer{
+    height: 40px;
+    background-color: #0FC38F;
+    overflow: hidden;
+ }
+ .back_button{
+    float: left;
+    border: 2px solid white;
+ }
+ .back_button a{
+     text-decoration: none;
+     font-size: 30px;
+     padding: 15px;
+     color: #f2f2f2;
+ }
+ .forwar_button{
+     float: right;
+     border: 2px solid white;
+ }
+ .forwar_button a{
+    text-decoration: none;
+    font-size: 30px;  
+    padding: 15px;
+    color: #f2f2f2;   
+ }
+ .forwar_button a:hover{
+    background-color: #BEF2D1;
+    color: #333;     
+ }
+ .back_button a:hover{
+    background-color: #BEF2D1;
+    color: #333;     
+ }
+ .goto{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+ }
+.goto img{
+    align-items: center;
+    width: 20px;
+    height: 20px;
+
+}
+.goto img:hover{
+    background-color: beige;
+}
+@media only screen and (max-width: 786px) {
+    
+.head_name{
+    font-size: 2em;
+    transition: 1.3s;
+}
+.sections a{
+    margin-center:10px;
+    padding: 20px 5px;
+}
+}
+b{
+    background: #F5F5F5;
+    color: #DC143C;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+hr {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}

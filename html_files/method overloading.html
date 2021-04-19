@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_files/method_overloading.css">
+    <title>Java Class</title>
+    <link rel="icon" href="../assets/favicon.png">
+</head>
+<body>
+    <div id="header">
+        
+        <a href="main_page.html" class="logo"> JAVA </a>
+        <a href="team_page.html">Team</a>
+        <a href="main_page.html">Home</a>
+    </div>
+
+    <div id="topic_heading">
+        <div class="head_name">
+            Method Overloading in Java
+        </div>
+
+        
+    </div>
+
+        <div id="class">
+            
+            
+             <div class="long_def">
+                <p>
+                   If a class has multiple methods having same name but different in parameters, it is known as <b> Method Overloading </b>.<br>
+                   <br>
+                   If we have to perform only one operation, having same name of the methods increases the readability of the program.<br>
+                    <br>
+
+                    Suppose you have to perform addition of the given numbers but there can be any number of arguments, if you write the method such as a(int,int) for two parameters, and b(int,int,int) for three parameters then it may be difficult for you as well as other programmers to understand the behavior of the method because its name differs. <br>
+                     <br>
+                   <h4> <u> Advantage of method overloading-: </u> </h4>
+                    <br>
+                    <h5> Method overloading increases the readability of the program. </h5> <br>
+                     <br>
+                    <h4><u>There are two ways to overload the method in java-:</u></h4> <br>
+                     <h5> 1. By changing number of arguments </h5> <br>
+                     <h5> 2. By changing the data type </h5>
+                     
+
+
+                </p>
+                <br>
+                <br>
+                <br>
+                <img src="../assets/mdover.png" alt="" width="500" height="300">
+            </div>
+            
+            
+            <br> 
+            <br> <br> 
+
+            <div class="Example">
+                <p>
+                   <b><u> 1) Method Overloading: changing no. of arguments-: </u></b> <br>
+                   <br>
+                   In this example, we have created two methods, first add() method performs addition of two numbers and second add method performs addition of three numbers. <br>
+
+                  In this example, we are creating static methods so that we don't need to create instance for calling methods.
+                </p>
+
+                <div class="general_format">
+                   class Adder <br>
+                     { <br> 
+                     static int add(int a,int b){return a+b;} <br>
+                       
+                      static int add(int a,int b,int c){return a+b+c;} <br>  
+                       } 
+                       <br> 
+                      class TestOverloading1 <br>
+                      {  <br>
+                      public static void main(String[] args)<br>
+                       {  <br>
+                      System.out.println(Adder.add(11,11)); <br> 
+                      System.out.println(Adder.add(11,11,11));  <br>
+                      }
+                       <br>
+                      }  <br>
+                     <br>
+                     Output-: <br>
+                     <br>
+                     22 <br>
+                     <br>
+                     33
+                     
+                          
+                          
+                       
+                </div>
+            </div>
+            
+
+             <div class="Example">
+                <p>
+                   <b><u> 2) Method Overloading: changing data type of arguments-: </u></b> <br>
+                   <br>
+                   In this example, we have created two methods that differs in data type. The first add method receives two integer arguments and second add method receives two double arguments.
+                </p>
+
+                <div class="general_format">
+                   class Adder<br>
+                   {  <br>
+                     static int add(int a, int b){return a+b;}  <br>
+                     static double add(double a, double b){return a+b;}  <br>
+                   } <br> 
+                   class TestOverloading2  <br>
+                   {  <br>
+                     public static void main(String[] args)<br>
+                     {  <br>
+                      System.out.println(Adder.add(11,11)); <br> 
+                       System.out.println(Adder.add(12.3,12.6));  <br>
+                     }
+                     <br>
+                     }  <br>
+                    <br>
+                    Output-:<br>
+                    <br>
+                     22<br>
+                     <br>
+                     24.9
+                     
+                          
+                          
+                       
+                </div>
+            </div>
+            
+            <br> <br>
+            <hr>
+            <br> <br> <br>
+        </div>
+        
+            <h2 align="center">
+                1905841 - ANUSHKA TRIPATHI<br>
+                Group-5<br><br>
+            </h2>
+
+        
+
+    <div class="footer">
+        <div class="back_button"><a href="Obj_Constructors.html">prev</a> </div>
+        <div class="forwar_button"> <a href="constructor overloading.html">next</a> </div>
+    </div>
+
+    <div class="goto">
+        <a href="#header">
+            <img src="../assets/arrow.png" alt=""></a>
+    </div>
+    
+</body>
+</html>

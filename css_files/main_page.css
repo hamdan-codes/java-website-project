@@ -1,0 +1,100 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+#header{
+    background-image: linear-gradient(to left, #17CF5B , #12C87B,#10C58C,#09BBB2,#00ADEC);
+    overflow: hidden;
+}
+#header .logo{
+    float: left;
+    font-family: 'Lobster', cursive;
+}
+#header a{
+    font-size: 25px;
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+
+}
+#header a:hover{
+    background-color: #BEF2D1;
+    color: #333;
+}
+.kiit_img{
+    padding-top: 70px;
+    width: auto;
+}
+.kiit_img img{
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.intro{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.intro_heading{
+    text-decoration: underline;
+    padding: 30px;
+}
+.intro p{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+ }
+ .footer{
+    height: 40px;
+    background-color: #0FC38F;
+    overflow: hidden;
+ }
+ .back_button{
+    float: left;
+    border: 2px solid white;
+ }
+ .back_button a{
+     text-decoration: none;
+     font-size: 30px;
+     padding: 15px;
+     color: #f2f2f2;
+ }
+ .forwar_button{
+     float: right;
+     border: 2px solid white;
+ }
+ .forwar_button a{
+    text-decoration: none;
+    font-size: 30px;  
+    padding: 15px;
+    color: #f2f2f2;   
+ }
+ .forwar_button a:hover{
+    background-color: #BEF2D1;
+    color: #333;     
+ }
+ .back_button a:hover{
+    background-color: #BEF2D1;
+    color: #333;     
+ }
+ .goto{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+ }
+.goto img{
+    align-items: center;
+    width: 20px;
+    height: 20px;
+
+}
+.goto img:hover{
+    background-color: beige;
+}

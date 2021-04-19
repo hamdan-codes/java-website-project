@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_files/constructor_overloading.css">
+    <title>Java Class</title>
+    <link rel="icon" href="../assets/favicon.png">
+</head>
+<body>
+    <div id="header">
+        
+        <a href="main_page.html" class="logo"> JAVA </a>
+        <a href="team_page.html">Team</a>
+        <a href="main_page.html">Home</a>
+    </div>
+
+    <div id="topic_heading">
+        <div class="head_name">
+            Constructor Overloading in Java
+        </div>
+
+        
+    </div>
+
+        <div id="class">
+            
+            
+             <div class="long_def">
+                <p>
+                   <b> Constructor overloading</b> is a technique in which a class can have any number of constructors that differ in parameter lists. <br>
+                    <br>
+                    The compiler differenciates these constructors by taking into account the number of parameters in the list and their type, enabling the programmer to create objects with desired functionality.
+                    <br><br>
+                     For e.g. Vector class has 4 types of constructors. If you do not want to specify the initial capacity and capacity increment then you can simply use default constructor of Vector class like this Vector v = new Vector(); however if you need to specify the capacity and increment then you call the parameterized constructor of Vector class with two int arguments like this: Vector v= new Vector(10, 5). <br>
+                     <br>
+                     <h4><u> When do we need constructor overloading? </u></h4> <br>
+                     <br>
+                    Sometimes there is a need of initializing an object in different ways. This can be done using constructor overloading. For example, Thread class has 8 types of constructors. If we do not want to specify anything about a thread then we can simply use default constructor of Thread class, however if we need to specify thread name, then we may call the parameterized constructor of Thread class with a String args like this:<br>
+                    <br>
+                  <center> Thread t= new Thread (" MyThread ");  </center>
+                </p>
+                <br>
+                <br>
+                <br>
+                <img src="../assets/cnover.jpg" alt="" width="500" height="300">
+            </div>
+            
+            
+            <br> 
+            <br> <br> 
+
+            <div class="Example">
+                <p>
+                    Now we see an example of constructor overloading and explain it. <br>
+                    The following code segment contains the definition for a class named <b> Box </b>
+                </p>
+
+                <div class="general_format">
+                    class  Box <br>
+                    { <br>
+                        int height, depth, length;
+                      <br>
+                      Box()
+                     {<br>
+                       height=depth=length=10;<br>
+                     }
+                      <br>
+                      Box(int x, int y)
+                      {<br>
+                        height=x;<br>
+                        depth=y;<br>
+                       }
+                        <br>
+                       Box(int x, int y, int z)
+                       {<br>
+                         height=x;<br>
+                         depth=y;<br>
+                         length=z;<br>
+                       }
+                        <br>
+                       }
+                        <br>
+                      class BoxClass
+                       {<br>
+                         public static void main(String args[])
+                         {<br>
+                          Box a= new Box();<br>
+                          System.out.println("Depth of a: "+a.depth);<br>
+                          Box b= new Box(10,15);<br>
+                          System.out.println("Depth of b: "+b.depth);<br>
+                          Box c= new Box(12,15,20);<br>
+                          System.out.println("Depth of c: "+c.depth);<br>
+                         }
+                         <br>
+                         }
+                          
+                          
+                       
+                </div>
+            </div>
+            <div class="explanation">
+               The class 'Box' contains three different variable height, depth and length as integers. It also has three constructors named Box(). The first constructor Box() is a default constructors since it does not have any parameters but it initializes variable length, height and depth to the value 10.
+                <br><br>
+                The second constructor Box() recieves two integers x, y as parameters and assigns x value to height, y value to depth. The third constructor Box() recieves three integers x, y, z as parameters and assigns x value to height, y value to depth, z value to length. In main() class Boxclass an object 'a' for the defined class is created with no parameters passed and it will call the default constructor. 
+                <br><br>
+                The next statement prints the depth value. The object 'b' is created for the Box class and the values 10, 15 are passed as arguments; it will call the constructor which has two integer values as parameters. Similarly, object 'c' is created for the Box class and the values 12, 15, 20 are passed as arguments; it will call the constructor which holds three integers as parameters. Thus the output of the program is 10,15,15.
+            </div>
+            
+
+             <div class="Example">
+                <p>
+                    Now we can see an another example.<br>
+                    Here we are creating two objects of class <b>StudentData</b>. One is with default constructor and another one using parameterized constructor. Both the constructors have different initialization code, similarly you can create any number of constructors with different-2 initialization codes for different-2 purposes.
+                </p>
+                
+                 
+                <div class="general_format">
+                    class StudentData <br>
+{ <br>
+   private int stuID;<br>
+   private String stuName;<br>
+   private int stuAge;<br>
+   StudentData()<br>
+   {<br>
+       //Default constructor<br>
+       stuID = 100;<br>
+       stuName = "New Student";<br>
+       stuAge = 18; <br>
+   }<br>
+   StudentData(int num1, String str, int num2) <br>
+   { <br>
+       //Parameterized constructor <br>
+       stuID = num1; <br>
+       stuName = str; <br>
+       stuAge = num2; <br>
+   } <br>
+   //Getter and setter methods <br>
+   public int getStuID()  <br>
+   { <br>
+       return stuID; <br>
+   }<br>
+   public void setStuID(int stuID)<br>
+ { <br>
+       this.stuID = stuID;<br>
+   } <br>
+   public String getStuName() <br>
+{ <br>
+       return stuName; <br>
+   } <br>
+   public void setStuName(String stuName)<br>
+ { <br>
+       this.stuName = stuName; <br>
+   }<br>
+   public int getStuAge() <br>
+{<br>
+       return stuAge;<br>
+   }<br>
+   public void setStuAge(int stuAge) <br>
+{<br>
+       this.stuAge = stuAge;<br>
+   }<br>
+
+   public static void main(String args[])<br>
+   {<br>
+       //This object creation would call the default constructor <br>
+       <br>
+       StudentData myobj = new StudentData(); <br>
+       System.out.println("Student Name is: "+myobj.getStuName());<br>
+       System.out.println("Student Age is: "+myobj.getStuAge());<br>
+       System.out.println("Student ID is: "+myobj.getStuID());<br>
+      <br>
+
+       /*This object creation would call the parameterized<br>
+        * constructor StudentData(int, String, int)*/ <br>
+        <br>
+       StudentData myobj2 = new StudentData(555, "Abir", 25);<br>
+       System.out.println("Student Name is: "+myobj2.getStuName());<br>
+       System.out.println("Student Age is: "+myobj2.getStuAge());<br>
+       System.out.println("Student ID is: "+myobj2.getStuID()); <br>
+  }<br>
+ <br>
+}  <br>
+<br><br>
+Output-: <br>
+<br>
+Student Name is: New Student <br>
+Student Age is: 18 <br>
+Student ID is: 100 <br>
+Student Name is: Abir <br>
+Student Age is: 25 <br>
+Student ID is: 555 <br>
+                     
+                          
+                       
+                </div>
+            </div>
+
+<div class="short_defn">
+        <u> Difference between Constructor and Method.</u> 
+             </div>
+ 
+           <br>
+                <br>
+                <img src="../assets/difference.png" alt="" width="700" height="500">
+
+
+
+
+
+            <br> <br>
+            <hr>
+            <br> <br> <br>
+        </div>
+        
+            <h2 align="center">
+                1905860 - ABIR MISHRA<br>
+                Group-5<br><br>
+            </h2>
+        
+
+        
+
+    <div class="footer">
+        <div class="back_button"><a href="method overloading.html">prev</a> </div>
+        
+    </div>
+
+    <div class="goto">
+        <a href="#header">
+            <img src="../assets/arrow.png" alt=""></a>
+    </div>
+    
+</body>
+</html>

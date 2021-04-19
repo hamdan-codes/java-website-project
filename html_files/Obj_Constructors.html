@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_files/Obj_Cons.css">
+    <title>Objects & Constructors</title>
+    <link rel="icon" href="../assets/favicon.png">
+</head>
+<body>
+    <div id="header">
+        
+        <a href="main_page.html" class="logo"> JAVA </a>
+        <a href="team_page.html">Team</a>
+        <a href="main_page.html">Home</a>
+    </div>
+
+    <div id="topic_heading">
+        <div class="head_name" >
+             Objects and Constructors
+        </div>
+
+        <div class="sections">
+            <a href="#objects">Java-Objects</a>
+            <a href="#Constructors">Java-Constructors</a>
+            <a href="#No_args_Cons">Java No-Arg Constructors</a><br><br>
+            <a href="#Parameterized">Java Parameterized Constructors</a>
+            <a href="#Default">Java Default Constructors</a>
+            
+           
+        </div>
+    </div>   
+
+        <div id="objects">
+            <div class="heading">
+                Java-Objects
+            </div>
+            
+            <div class="short_defn">
+                Object is an instance of a class.
+             </div>
+             <div class="long_def">
+                <p>
+                    In Java, an object is created from a class. <br> We have already created the class named <b>Student</b>, so now we can use this to create objects. <br> <br>
+                    To create an object of <b>Student</b> class, specify the class name, followed by the object name, and use the keyword <b>new</b>.
+                </p>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div class="Example">
+                <p>
+                    Let's see an example that how can we create an object of a class. <br>
+                    The following code segment creates an objects for a class named <b> Student</b>.
+                </p>
+
+                <div class="general_format">
+                    class  Student <br>
+                    { <br>
+                        String name; <br>
+                        int roll_no; <br>
+                        public static void main(String[] args)<br>
+                         { <br>
+                        Student s = new Student(); <br>
+                        s.name = "Pranjali"; <br>
+                        s.roll_no = 1905406; <br>
+                        System.out.println(s.name); <br>
+                        System.out.println(s.roll_no); <br>
+                        } <br>
+                    }<br>
+                </div>
+            </div>
+            <div class="explanation">
+                In the above program an object <b>s</b> has been creted. <br>
+                After creating object "s" the two data members <em> name</em> and <em>roll_no</em> are allcated with some memory space. <br>
+                To access the data members of a class we use dot(".") operator with objects (here <b>s.name </b>  and <b>s.roll_no</b> ). <br>
+                Data member name is allocated with value "Pranjali" which is a string type. <br>
+                And Data member roll_no is allocated with value 1905406 which is a integer type. <br>
+                To print the values of name and roll_no again "." operator is used with with object. <br>
+            </div>
+            <br> <br>
+            <hr>
+            <br> <br> <br>
+        </div>        
+
+        <div id="Constructors">
+            <div class="heading">
+                Java Constructors
+            </div>
+            
+            <div class="short_defn">
+                A constructor in Java is a special method that is used to initialize objects.
+             </div>
+             <div class="long_def">
+                <p>
+                    The constructor is called when an object of a class is created. It can be used to set initial values for object attributes <br>
+                    <br>
+                   <h4>In Java, constructors can be divided into 3 types:</h4> <br>
+                <ul>
+                    <li>1. No-Arg Constructor</li>
+                    <li>2. Parameterized Constructor</li>
+                    <li>3. Default Constructor
+                    </li>
+                    
+                </ul>
+                </p>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div class="Example">
+                <p>
+                    Let's see an example about constructor. <br>
+                    The following code segment contains the definition for a class named <b> Student</b>.
+                </p>
+
+                <div class="general_format">
+                    class Student<br>
+                     {<br>
+                        private String name;<br>      
+                
+                        Student()<br>
+                        {<br>
+                          System.out.println("Constructor Called:");<br>
+                          name = "Pranjali";<br>
+                        }<br>
+                      
+                        public static void main(String[] args)<br>
+                         {<br>
+                      
+                         
+                          Student obj = new Student();<br>
+                          System.out.println("The name of the student is " + obj.name);<br>
+                        }<br>
+                      }<br>
+
+                </div>
+            </div>
+            <div class="explanation" style="text-align: left;">
+                In the above example, we have created a constructor named <b>Student()</b>. Inside the constructor, we are initializing the value of the name variable.<br>
+                Here, when the object is created, the <b>Student()</b> constructor is called. And, the value of the name variable is initialized.<br>
+
+                Hence, the program prints the value of the name variables as <b>Pranjali</b>.
+            </div>
+            <div class="explanation" style="text-align: left;">
+                <h4>NOTE</h4>
+                <h5> The constructor name must match the class name, and it cannot have a return type (like void).<br>
+
+                Also note that the constructor is called when the object is created.<br>
+
+                All classes have constructors by default: if you do not create a class constructor yourself, Java creates one for you. 
+                Its just that, then you won't be able to set initial values for object attributes.<br></h5>
+            
+            <br> <br>
+            <hr>
+            <br> <br> <br>
+        </div>
+
+
+        <div id="No_args_Cons">
+            <div class="heading">
+                Java No-Arg Constructors
+            </div>
+            
+            <div class="short_defn">
+                A Java constructor may or may not have any parameters (arguments).<br>
+
+                If a constructor does not accept any parameters, it is known as a no-argument constructor. <br>
+                
+             </div>
+             
+
+            <div class="Example">
+                <p>
+                    Let's see an example to understand it better. <br>
+                
+                <div class="general_format">
+                    class Main <br>
+                    {<br>
+
+                        int i;<br>
+                      
+                        
+                        private Main()<br>
+                         {<br>
+                          i = 5;<br>
+                          System.out.println("Constructor is called");<br>
+                        }<br>
+                      
+                        public static void main(String[] args)<br>
+                         {<br>
+                      
+                          Main obj = new Main();<br>
+                          System.out.println("Value of i: " + obj.i);<br>
+                        }<br>
+                      }<br>
+                </div>
+            </div>
+            <div class="explanation" style="text-align: left;">
+                In the above example, we have created a constructor Main(). Here, the constructor does not accept any parameters. Hence, it is known as a no-arg constructor.<br>
+                <br><h4>NOTE</h4>
+                Once a constructor is declared private, it cannot be accessed from outside the class. 
+                So, creating objects from outside the class is prohibited using the private constructor.<br>
+
+                Here, we are creating the object inside the same class. Hence, the program is able to access the constructor.
+
+However, if we want to create objects outside the class, then we need to declare the constructor as public.
+            </div>
+            
+            <br> <br>
+            <hr>
+            <br> <br> 
+        </div>
+
+
+        
+
+        
+
+        <div id="Parameterized">
+            <div class="heading">
+                Java Parameterized Constructors
+            </div>
+            
+            <div class="short_defn">
+                A Java constructor can also accept one or more parameters. Such constructors are known as parameterized constructors (constructor with parameters).
+             </div>
+            
+            <div class="Example">
+                <p>
+                    Let's see an example for better understanding. <br>
+                   
+                </p>
+
+                <div class="general_format">
+                    class Main<br>
+                     {<br>
+
+                        String languages;<br>
+                                              
+                        Main(String lang) <br>
+                        {<br>
+                          languages = lang;<br>
+                          System.out.println(languages + " Programming Language");<br>
+                        }<br>
+                      
+                        public static void main(String[] args)<br>
+                         {<br>
+                                               
+                          Main obj1 = new Main("Java");<br>
+                          Main obj2 = new Main("Python");<br>
+                          Main obj3 = new Main("C");<br>
+                        }<br>
+                      }<br>
+                </div>
+            </div>
+            <div class="explanation" style="text-align: left;">
+                In the above example, we have created a constructor named Main(). Here, the constructor takes a single parameter.<br>
+                Later, we are passing the single value to the constructor. Based on the argument passed, the language variable is initialized inside the constructor.<br><br>
+                And finally, the output will show like this :- <br><br>
+                Java Programming Language<br>
+                Python Programming Language<br>
+                C Programming Language<br>
+            </div>
+            
+            <br> <br>
+        </div>
+
+        <div id="Default">
+            <div class="heading">
+                Java Default Constructor
+            </div>
+            <div class="short_defn">
+                If we do not create any constructor, the Java compiler automatically create a no-arg constructor during the execution of the program.
+                 This constructor is called Default Constructor.   
+            </div>
+            <div class="Example">
+                <p>
+                   
+                    The default constructor initializes any uninitialized instance variables with default values.
+                     Let's see this from an example. <br>
+                   
+                </p>
+
+                <div class="general_format">
+                    class Main <br>
+                     { <br>
+
+                        int a; <br>
+                        boolean b; <br>
+                                              
+                        private Main() <br>
+                         { <br>
+                          a = 0; <br>
+                          b = false; <br>
+                        } <br>
+                      
+                        public static void main(String[] args) <br>
+                         { <br>
+                       
+                          Main obj = new Main();
+                          <br>
+                          System.out.println("Default Value:"); <br>
+                          System.out.println("a = " + obj.a); <br>
+                          System.out.println("b = " + obj.b); <br>
+                        } <br>
+                      } <br>
+                </div>
+            </div>
+            <div class="explanation" style="text-align: left;">
+                Here, we haven't created any constructors. Hence, the Java compiler automatically creates the default constructor. <br>
+               
+                So in the above program, the variables <b>a</b> and <b>b</b> are initialized with default value <b>0</b> and <b>false</b> respectively.
+            </div>
+            <br>  <br>
+
+        </div>
+
+        <div class="heading">
+            
+        </div>
+
+            <hr style="height: 10px; background: black"><br><br>
+            <h2 align="center">
+                1905406 - PRANJALI PRISHA<br>
+                Group-5<br><br>
+            </h2>
+
+
+        
+
+
+    <div class="footer">
+        <div class="back_button"><a href="static_final.html">prev</a> </div>
+        <div class="forwar_button"> <a href="method overloading.html">next</a> </div>
+    </div>
+
+    <div class="goto">
+        <a href="#header">
+            <img src="../assets/arrow.png" alt=""></a>
+    </div>
+    
+</body>
+</html>

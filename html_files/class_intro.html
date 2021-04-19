@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_files/class_intro.css">
+    <title>Java Class</title>
+    <link rel="icon" href="../assets/favicon.png">
+</head>
+<body>
+    <div id="header">
+        
+        <a href="main_page.html" class="logo"> JAVA </a>
+        <a href="team_page.html">Team</a>
+        <a href="main_page.html">Home</a>
+    </div>
+
+    <div id="topic_heading">
+        <div class="head_name">
+            Java Classes/Objects
+        </div>
+
+        <div class="sections">
+            <a href="#class">Java-Class</a>
+            <a href="#members">Java-Class Attributes</a>
+            <a href="#functions">Java-Member Function</a>
+            <a href="#modifiers">Java-Modifiers</a>
+        </div>
+    </div>
+
+        <div id="class">
+            <div class="heading">
+                Java-Class
+            </div>
+            
+            <div class="short_defn">
+                Java is an object - oriented programmin language
+             </div>
+             <div class="long_def">
+                <p>
+                    A class is kind of mold that dictates what objects can and cannot do. <br> 
+                    It is is a template or blueprint for how to build an object.
+                    <br> <br>
+                    In simple words a class is prototype that defines state placeholders and behaviour which is common to all objects of its kind. <br> <br>
+                    Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.
+                
+                    An object is called as an instance of a class. <br>
+                    If one class is defined it is posiible to create many isnatnces of the class.
+                </p>
+                <br>
+                <br>
+                <br>
+                <img src="../assets/class.jpg" alt="" width="500" height="300">
+            </div>
+            <div class="gff">
+                <p>
+                    General format to declare a class:
+                </p>
+                <div class="general_format">
+                    public class < class_name <span></span> > <br>
+                    { <br>
+                        data member; <br>
+                        method; <br>
+                    }
+                </div>
+            </div>
+            
+            <div class="explanation">
+                The class is a keyword and class_name can be any valid name. <br>
+                The members of the class are data members and methods. <br> <br>
+                Data members represents the variables and method refers to the functionality.
+            </div>
+            
+            <br> <br>
+            <br> <br> <br>
+
+            <div class="Example">
+                <p>
+                    Let's see an example that how can we create a class. <br>
+                    The following code segment contains the definition for a class named <b> Student</b>
+                </p>
+
+                <div class="general_format">
+                    public class  Student <br>
+                    { <br>
+                        String name; <br>
+                        int roll_no; <br>
+                    }
+                </div>
+            </div>
+            <div class="explanation">
+                The class is a keyword and class_name can be any valid name. <br>
+                The members of the class are data members and methods. <br> <br>
+                Data members represents the variables and method refers to the functionality.
+            </div>
+            
+            <br> <br>
+            <hr>
+            <br> <br> <br>
+        </div>
+        
+
+        <div id="members">
+            <div class="heading">
+                Java Class Attributes
+            </div>
+            
+            <div class="short_defn">
+                Class Attributes are variable defined/declared in the scope of a class.
+             </div>
+             <div class="long_def">
+                <p>
+                    Attributes are variables within a class. <br>
+                    An attribute is another term for a field. <br> It's typically a public constant or a public variable that can be accessed directly. <br>
+                    These attributes are allocated with memory only, when an object of a class is created.
+
+                </p>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div class="Example">
+                <p>
+                    Let's see an example about class attribute. <br>
+                    The following code segment contains the definition for a class named <b> Student</b>.
+                </p>
+
+                <div class="general_format">
+                    class  Student <br>
+                    { <br>
+                        String name; <br>
+                        int roll_no; <br>
+                        public static void main(String[] args) { <br>
+                        Student s = new Student(); <br>
+                        s.name = "Aakash"; <br>
+                        s.roll_no = 1905147; <br>
+                        System.out.println(s.name); <br>
+                        System.out.println(s.roll_no); <br>
+                        } <br>
+                    }
+                </div>
+            </div>
+            <div class="explanation">
+                In class <b>Student</b> the two attributes are name and roll_no. <br>
+                Here, as no access specifier is given, it is considered to be of default type. <br>
+                These attributes are accessed by object useng <b>"."</b> operator. <br>
+                Only those data members are accessible by object which are public or default type.
+            </div>
+            
+            <br> <br>
+            <hr>
+            <br> <br> <br>
+        </div>
+
+
+        <div id="functions">
+            <div class="heading">
+                Java-Member Function
+            </div>
+            
+            <div class="short_defn">
+                Member Functions are functions declared/defined in the scope of a class.
+             </div>
+             <div class="long_def">
+                <p>
+                    Member functions are of following types:
+                    <ul>
+                        <li>
+                            Built-in -  (Predefined in java)
+                        </li>
+                        <li>
+                            User-defined - (Built by users, and can be used at any point of time)
+                        </li>
+                        <li>
+                            Static functions - ( it can be accessed without creating an object of the class)
+                        </li>
+                        <li>
+                            abstract functions - (declared in abstract class. it is used a template and data abstraction.)
+                        </li>
+                    </ul>
+                </p>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div class="Example">
+                <p>
+                    Let's see an example for creating a function. <br>
+                    The following code segment contains the definition for a class named <b> Student</b>
+                </p>
+
+                <div class="general_format">
+                    class Student <br>
+                    { <br>
+                        String name; <br>
+                        int roll_no; <br>
+                        public void getdata() { <br>
+                            name = "Aakash"; <br>
+                            roll_no = 1905147; <br>
+                          } <br>
+                        public void showdata(){ <br>
+                            System.out.println("name: "+ name+" roll no: "+ roll_no); <br>
+                        } <br>
+                        public static void main(String[] args) { <br>
+                            Student s = new Student(); <br>
+                            s.getdata(); <br>
+                            s.showdata(); <br>                        
+                    } <br>
+                }
+                </div>
+            </div>
+            <div class="explanation">
+                Here two functions <em>getdata()</em> and <em>putdata()</em> are declared. <br>
+                getdata() is public and of void type. And its work is to initialise name and roll_no with some data. <br>
+                putdata() is also public and of void type. And its work is to print the values of name and roll_no. <br>
+                Here both functions are public type, which can be directly accessed by <b>main</b> method, using object and "." operator.
+            </div>
+            
+            <br> <br>
+            <hr>
+            <br> <br> <br>
+        </div>
+
+
+        
+
+        
+
+        <div id="modifiers">
+            <div class="heading">
+                Java-Modifiers
+            </div>
+            
+            <div class="short_defn">
+                It is used to set the access level for classes, attributes, methods and constructors.
+             </div>
+             <div class="long_def">
+                <p>
+                    For class the access specifiers are: <br> <br>
+                    <table>
+                        <tr>
+                          <th>Modifiers</th>
+                          <th>Description</th>
+                        </tr>
+                        <tr>
+                          <td>public</td>
+                          <td> The class is accessible by any other class</td>
+                        </tr>
+                        <tr>
+                          <td>default</td>
+                          <td>The class is only accessible by classes in the same package. <br> This is used when you don't specify a modifier.</td>
+                        </tr>
+                      </table>
+
+                      <br> <br>
+                    
+                      For  attributes, methods and constructors the access specifiers are: <br> <br>
+                      <table>
+                          <tr>
+                            <th>Modifiers</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td>public</td>
+                            <td> The code is accessible for all classes</td>
+                          </tr>
+                          <tr>
+                            <td>default</td>
+                            <td>The class is only accessible by classes in the same package. <br> This is used when you don't specify a modifier.</td>
+                          </tr>
+                          <tr>
+                            <td>private</td>
+                            <td> The code is only accessible within the declared class</td>
+                          </tr>
+                          <tr>
+                            <td>protected</td>
+                            <td> The code is accessible in the same package and subclasses.</td>
+                          </tr>
+                        </table>
+
+                </p>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div class="Example">
+                <p>
+                    Let's see an example. <br>
+                    The following code segment contains the definition for a class named <b> Student</b>
+                </p>
+
+                <div class="general_format">
+                    class Student <br>
+                    { <br>
+                        String name; <br>
+                        private roll_no; <br>
+                        public void getdata() { <br>
+                            name = "Aakash"; <br>
+                            roll_no = 1905147; <br>
+                          } <br>
+                        public void showdata(){ <br>
+                            System.out.println("name: "+ name+" roll no: "+ roll_no); <br>
+                        } <br>
+                        public static void main(String[] args) { <br>
+                            Student s = new Student(); <br>
+                            s.getdata(); <br>
+                            s.showdata(); <br>                        
+                    } <br>
+                }
+                </div>
+            </div>
+            <div class="explanation">
+                Here Student class is default type as no access specifier is given to class. <br>                
+                In class Student we have two attributes name and roll_no. <br>
+                As there is no access specifier provided <em> name </em> avriable, it has pre-defined access specifier, i.e. , <b>default</b>. <br>
+                Whereas, attribute <em>roll_no</em> is private type which is only visible to the scope of class. And can't be accessed by main function. <br>
+                The two functions <em>getdata()</em> and <em>putdata()</em> are predefined public type. <br>
+                And therefore, it can be directly accessed by main function.
+            </div>
+            
+            <br> <br>
+        </div>
+
+
+    <div class="footer">
+        <div class="back_button"><a href="team_page.html">prev</a> </div>
+        <div class="forwar_button"> <a href="static_final.html">next</a> </div>
+    </div>
+
+    <div class="goto">
+        <a href="#header">
+            <img src="../assets/arrow.png" alt=""></a>
+    </div>
+    
+</body>
+</html>

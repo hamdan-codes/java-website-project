@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_files/static_final.css">
+    <title>Static and Final Keyword</title>
+    <link rel="icon" href="../assets/favicon.png">
+</head>
+<body>
+    <div id="header">
+        
+        <a href="main_page.html" class="logo"> JAVA </a>
+        <a href="team_page.html">Team</a>
+        <a href="main_page.html">Home</a>
+    </div>
+
+    <div id="topic_heading">
+        <div class="head_name">
+            Static and Final Keywords in Java
+        </div>
+
+        <div class="sections">
+            <a href="#static" style="font-size: 25px">Static Keyword</a>
+            <a href="#staticvariable">Static Variable</a>
+            <a href="#staticmethod">Static Method</a>
+            <a href="#staticblock">Static Block</a>
+            <a href="#staticclass">Static Nested Class</a>
+        </div>
+        <div class="sections">
+            <a href="#final" style="font-size: 25px">Final Keyword</a>
+            <a href="#finalvariable">Final Variable</a>
+            <a href="#finalmethod">Final Method</a>
+            <a href="#finalclass">Final Class</a>
+        </div>
+    </div>
+
+        <div id="static">
+            <div class="heading">
+                Java static keyword
+            </div>
+            
+            <div class="short_defn">
+                The static keyword in Java is used for memory management mainly. We can apply static keyword with variables, methods, blocks and nested classes. The static keyword belongs to the class than an instance of the class.
+             </div>
+             <div class="long_def">
+                <p><h4>Static can be:</h4> <br>
+                <ul>
+                    <li>1. Variable (also known as a class variable)</li>
+                    <li>2. Method (also known as a class method)</li>
+                    <li>3. Block</li>
+                    <li>4. Nested class</li>
+                </ul></p>
+                <br>
+            </div>
+            <div class="short_defn">
+                <img src="../assets/staticvariable.jpg" align="center" />
+            </div>
+            <div class="gff" id="staticvariable">
+                <p style="font-size: 30px">
+                    <b>1) Java static variable</b>
+                </p>
+                <p>
+                    If you declare any variable as static, it is known as a static variable.
+
+                <ul>
+                    <li align="center">- The static variable can be used to refer to the common property of all objects (which is not unique for each object), <br>
+                    for example, the company name of employees, college name of students, etc.</li>
+                    <li align="center">- The static variable gets memory only once in the class area at the time of class loading.</li>
+                </ul>
+                </p>
+                <h3 align="center">Advantages of static variable</h3>
+                <h5 align="center">It makes your program memory efficient (i.e., it saves memory).</h5>
+
+                <div class="general_format">
+                    //Java Program to demonstrate the use of static variable  <br>
+                    class Student{  <br>
+                       int rollno;//instance variable  <br>
+                       String name;  <br>
+                       static String college ="ITS";//static variable  <br>
+                       //constructor  <br>
+                       Student(int r, String n){  <br>
+                       rollno = r;  <br>
+                       name = n;  <br>
+                       }  <br>
+                       //method to display the values  <br>
+                       void display (){System.out.println(rollno+" "+name+" "+college);}<br>  
+                    }  <br>
+                    //Test class to show the values of objects  <br>
+                    public class TestStaticVariable1{  <br>
+                     public static void main(String args[]){  <br>
+                     Student s1 = new Student(111,"Karan");  <br>
+                     Student s2 = new Student(222,"Aryan");  <br>
+                     //we can change the college of all objects by the single line of code  <br>
+                     //Student.college="BBDIT";  <br>
+                     s1.display();  <br>
+                     s2.display();  <br>
+                     }  <br>
+                    }  <br>
+                </div>
+            </div>
+            
+            <h2 align="center"><br>Program to count the number of objects using static variable</h2>
+            <h4 align="center">In this example, we have created an instance variable named count which is incremented in the constructor. Since instance variable gets the memory at the time of object creation, each object will have the copy of the instance variable. If it is incremented, it won't reflect other objects. So each object will have the value 1 in the count variable.</h4>
+            <div class="general_format">
+                //Java Program to illustrate the use of static variable which is shared with all objects.  <br>
+                class Counter2{  <br>
+                static int count=0;//will get memory only once and retain its value  <br>
+                  <br>
+                Counter2(){  <br>
+                count++;//incrementing the value of static variable  <br>
+                System.out.println(count);  <br>
+                }  <br>
+                  <br>
+                public static void main(String args[]){  <br>
+                //creating objects  <br>
+                Counter2 c1=new Counter2();  <br>
+                Counter2 c2=new Counter2();  <br>
+                Counter2 c3=new Counter2();  <br>
+                }  <br>
+                }  <br>
+            </div>
+
+            
+            <br> <br>
+            <hr>
+            <br> <br> <br>
+
+
+
+
+
+            <div class="gff" id="staticmethod">
+                <p style="font-size: 30px">
+                    <b>2) Static Method</b>
+                </p>
+                <p>
+                    If you apply static keyword with any method, it is known as static method.
+
+                <ul>
+                    <li align="center">- A static method belongs to the class rather than the object of a class.</li>
+                    <li align="center">- A static method can be invoked without the need for creating an instance of a class.</li>
+                    <li align="center">- A static method can access static data member and can change the value of it.</li>
+                </ul>
+                </p>
+                <h3 align="center">Example of static method</h3>
+
+                <div class="general_format">
+                    //Java Program to demonstrate the use of a static method.  <br>
+                    class Student{  <br>
+                         int rollno;  <br>
+                         String name;  <br>
+                         static String college = "ITS";  <br>
+                         //static method to change the value of static variable  <br>
+                         static void change(){  <br>
+                         college = "BBDIT";  <br>
+                         }  <br>
+                         //constructor to initialize the variable  <br>
+                         Student(int r, String n){  <br>
+                         rollno = r;  <br>
+                         name = n;  <br>
+                         }  <br>
+                         //method to display values  <br>
+                         void display(){System.out.println(rollno+" "+name+" "+college);}  <br>
+                    }  <br>
+                    //Test class to create and display the values of object  <br>
+                    public class TestStaticMethod{  <br>
+                        public static void main(String args[]){  <br>
+                        Student.change();//calling change method  <br>
+                        //creating objects  <br>
+                        Student s1 = new Student(111,"Karan");  <br>
+                        Student s2 = new Student(222,"Aryan");  <br>
+                        Student s3 = new Student(333,"Sonoo");  <br>
+                        //calling display method  <br>
+                        s1.display();  <br>
+                        s2.display();  <br>
+                        s3.display();  <br>
+                        }  <br>
+                    }  <br>
+                </div>
+            </div>
+            <h3 align="center">Restrictions of static method</h3>
+                <h4 align="center">There are two main restrictions for the static method. They are:</h4>
+                <h5 align="center">
+                    1. The static method can not use non static data member or call non-static method directly.<br>
+                    2. this and super cannot be used in static context.
+                </h5>
+
+            <h2 align="center"><br>Program to show the above restriction which results in compile error:</h2>
+            <div class="general_format">
+                class A{  <br>
+                     int a=40;//non static  <br>
+                       <br>
+                     public static void main(String <br>args[]){  <br>
+                      System.out.println(a);  <br>
+                     }  <br>
+                    }      <br> 
+            </div>
+
+
+
+            
+            <br> <br>
+            <hr>
+            <br> <br> <br>
+
+
+
+            <div class="gff" id="staticblock">
+                <p style="font-size: 30px">
+                    <b>3) Static Block</b>
+                </p>
+                <p>
+                <ul>
+                    <li align="center">- Is used to initialize the static data member.</li>
+                    <li align="center">- It is executed before the main method at the time of classloading.</li>
+                </ul>
+                </p>
+                <h3 align="center">Example of static block</h3>
+
+                <div class="general_format">
+                    class A2{  <br>
+                      static{System.out.println("static block is invoked");}  <br>
+                      public static void main(String args[]){  <br>
+                       System.out.println("Hello main");  <br>
+                      }  <br>
+                    }  <br>
+                </div>
+            </div>
+
+
+            <div class="gff" id="staticclass">
+                <p style="font-size: 30px">
+                    <b>4) Java Static Nested Class</b>
+                </p>
+                <p>
+                    A static class i.e. created inside a class is called static nested class in java. It cannot access non-static data members and methods. It can be accessed by outer class name.
+
+                <ul>
+                    <li align="center">- It can access static data members of outer class including private.</li>
+                    <li align="center">- TStatic nested class cannot access non-static (instance) data member or method.</li>
+                </ul>
+                </p>
+                <h3 align="center"><br>Java static nested class example with instance method:</h3>
+
+                <div class="general_format">
+                    class TestOuter1{  <br>
+                      static int data=30;  <br>
+                      static class Inner{  <br>
+                       void msg(){System.out.println("data is "+data);} <br> 
+                      }  <br>
+                      public static void main(String args[]){  <br>
+                      TestOuter1.Inner obj=new TestOuter1.Inner();  <br>
+                      obj.msg();  <br>
+                      }  <br>
+                    }  <br>
+                </div>
+
+                <h3 align="center"><br>Internal class generated by the compiler:</h3>
+
+                <div class="general_format">
+                    import java.io.PrintStream;  <br>
+                    static class TestOuter1$Inner  <br>
+                    {  <br>
+                    TestOuter1$Inner(){}  <br>
+                    void msg(){  <br>
+                    System.out.println((new StringBuilder()).append("data is ") .append(TestOuter1.data).toString());  
+                    }    <br>
+                    }  <br>
+                </div>
+
+
+
+            </div>
+            
+            <h4 align="center">If you have the static member inside static nested class, you don't need to create instance of static nested class</h4>
+            <div class="general_format">
+                class TestOuter2{  <br>
+                  static int data=30;  <br>
+                  static class Inner{  <br>
+                   static void <br>msg(){System.out.println("data is "+data);}  <br>
+                  }  <br>
+                  public static void main(String args[]){  <br>
+                  TestOuter2.Inner.msg();//no need to create the instance of static nested class  <br>
+                  }  <br>
+                }  <br>
+            </div>
+
+            
+            <br> <br>
+            <hr>
+            <br> <br> <br> 
+            <hr style="height: 10px; background: black">
+
+
+
+
+        </div>
+        
+
+
+
+
+        <div id="final">
+            <div class="heading">
+                Final keyword in Java
+            </div>
+            
+            <div class="short_defn">
+                The final keyword in java is used to restrict the user. The java final keyword can be used in many context.
+             </div>
+             <div class="long_def">
+                <p><h4>Final can be:</h4> <br>
+                <ul>
+                    <li>1. Variable</li>
+                    <li>2. Method</li>
+                    <li>3. Class</li>
+                </ul></p>
+                <br>
+            </div>
+            <div class="short_defn">
+                The final keyword can be applied with the variables, a final variable that have no value it is called blank final variable or uninitialized final variable. It can be initialized in the constructor only. The blank final variable can be static also which will be initialized in the static block only. We will have detailed learning of these. Let's first learn the basics of final keyword.<br>
+                <img src="finalkeyword.jpg" />
+             </div>
+            <div class="gff" id="finalvariable">
+                <p style="font-size: 30px">
+                    <b>1) Java final variable</b>
+                </p>
+                <p>
+                    If you make any variable as final, you cannot change the value of final variable(It will be constant).
+                </p>
+
+                <h3 align="center">Example of final variable</h3>
+
+                <div class="general_format">
+                    class Bike9{  <br>
+                        final int speedlimit=90;//final variable  <br>
+                        void run(){  <br>
+                        speedlimit=400;  <br>
+                        }  <br>
+                        public static void main(String args[]){ <br> 
+                        Bike9 obj=new  Bike9(); <br> 
+                        obj.run();  <br>
+                        }  <br>
+                        }//end of class  <br><br>
+
+                </div>
+                        <h3 align="center">Output : <h4 align="center">Compile Time Error</h4></h3>
+            </div>
+            
+            <br> <br>
+            <hr>
+            <br> <br> <br>
+
+            <div class="gff" id="finalmethod">
+                <p style="font-size: 30px">
+                    <b>2) Java final method</b>
+                </p>
+                <p>
+                    If you make any method as final, you cannot override it.
+                </p>
+
+                <h3 align="center">Example of final method</h3>
+
+                <div class="general_format">
+                    class Bike{  <br>
+                        final void run(){System.out.println("running");}  <br>
+                        }  <br>
+                         <br>
+                        class Honda extends Bike{  <br>
+                        void run(){System.out.println("running safely with 100kmph");} <br> 
+                         <br>
+                        public static void main(String args[]){  <br>
+                        Honda honda= new Honda();  <br>
+                        honda.run();  <br>
+                        }  <br>
+                        }  <br><br>
+
+                </div>
+                        <h3 align="center">Output : <h4 align="center">Compile Time Error</h4></h3>
+
+
+                <h3 align="center"><br><br>final method can be inherited</h3>
+
+                <div class="general_format">
+                    class Bike{  <br>
+                        final void <br>run(){System.out.println("running...");}  <br>
+                        }  <br>
+                        class Honda2 extends Bike{  <br>
+                        public static void main(String args[]){  <br>
+                        new Honda2().run();  <br>
+                        }  <br>
+                        }  <br><br>
+
+                </div>
+                        <h3 align="center">Output : <h4 align="center">running...</h4></h3>
+
+
+            </div>
+            
+            <br> <br>
+            <hr>
+            <br> <br> <br>
+
+
+            <div class="gff" id="finalclass">
+                <p style="font-size: 30px">
+                    <b>3) Java final class</b>
+                </p>
+                <p>
+                    If you make any class as final, you cannot extend it.
+                </p>
+
+                <h3 align="center">Example of final class</h3>
+
+                <div class="general_format">
+                    final class Bike{}  <br><br>
+                    <br>
+                    class Honda1 extends Bike{  <br>
+                    void run(){System.out.println("running safely with 100kmph");}  <br>
+                    <br>
+                    public static void main(String args[]){  <br>
+                    Honda1 honda= new Honda1();  <br>
+                    honda.run();  <br>
+                    }  <br>
+                    }  <br><br>
+
+                </div>
+                        <h3 align="center">Output : <h4 align="center">Compile Time Error</h4></h3>
+            </div>
+            
+            <br> <br>
+            <hr>
+            <br> <br> <br> 
+
+
+            <hr style="height: 10px; background: black">
+
+
+
+        </div>
+
+
+        <div class="heading">
+            <img src="../assets/Thank-You-Gif.gif" width="50%" />
+        </div>
+
+            <hr style="height: 10px; background: black"><br><br>
+            <h2 align="center">
+                1905387 - CHAUDHARY HAMDAN<br>
+                Group-5<br><br>
+            </h2>
+
+    <div class="footer">
+        <div class="back_button"><a href="class_intro.html">prev</a> </div>
+        <div class="forwar_button"> <a href="Obj_Constructors.html">next</a> </div>
+    </div>
+
+    <div class="goto">
+        <a href="#header">
+            <img src="../assets/arrow.png" alt=""></a>
+    </div>
+    
+</body>
+</html>
