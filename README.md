@@ -10,4 +10,9 @@
   </ul>
 </h3><br>
 
+<h3>
+  To run the website, open the main_page.html file after cloning it to your device.
+</h3><br>
+
+
 # Thank you
